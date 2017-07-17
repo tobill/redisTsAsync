@@ -1,14 +1,18 @@
-import * as RedisTsAsync from "../RedisTsAsync"
-import * as Redis from "redis"
+import * as redis from 'redis';  //Has ambient declaration from DT
 
 
-it('init redis client', async () => {
-    let r = RedisTsAsync.createClient({host: "192.168.56.2"});
-    expect(r.config.host).toBe("192.168.56.2");
-    expect(r.config.port).toBe(6379);
+import bluebird = require('bluebird');  //Has ambient declaration from DT
 
-    const rkeys = await r.keys("*");
-    expect(rkeys[0]).toBe("test");
-  
-  
-});
+
+
+bluebird.promisifyAll((<any>redis).RedisClient.prototype);
+bluebird.promisifyAll((<any>redis).Multi.prototype);
+
+let rc = redis.createClient(6379, '192.168.56.2');
+
+rc.getAsync('*');
+
+
+rc.quitAsync();
+
+

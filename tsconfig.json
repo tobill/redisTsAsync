@@ -7,7 +7,7 @@
         "sourceMap": true,
         "outDir": "lib",
         "baseUrl": ".",
-        "declaration": true,
+        "declaration": false,
         "paths": {
             "*": [
                 "node_modules/*",

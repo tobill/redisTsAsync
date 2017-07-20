@@ -1,16 +1,12 @@
 {
     "name": "redis-ts-async",
-    "version": "0.1.3",
-    "description": "redis lib for typescript with promises fopr async / await use",
+    "version": "0.1.12",
+    "description": "redis lib for typescript with promises for async / await use",
     "repository": "",
     "author": "Tobias Billep <t.billep@googlemail.com>",
     "license": "MIT",
-    "scripts": {
-        "prepare": "npm run clean && npm run build",
-        "build": "tsc.cmd",
-        "clean": "rimraf rimraf dist es lib coverage"
-    },
-    "main": "lib/redisTsAsync.js",
+    "main": "redisTsAsync.js",
+    "types": "redisTsAsync.d.ts",
     "dependencies": {
         "bluebird": "^3.5.0",
         "redis": "^2.7.1"

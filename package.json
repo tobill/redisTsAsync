@@ -1,8 +1,8 @@
 {
     "name": "redis-ts-async",
-    "version": "0.1.12",
+    "version": "0.2.0",
     "description": "redis lib for typescript with promises for async / await use",
-    "repository": "",
+    "repository": "https://github.com/tobill/redisTsAsync",
     "author": "Tobias Billep <t.billep@googlemail.com>",
     "license": "MIT",
     "main": "redisTsAsync.js",
